@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AA048AB4DC8A0E804B1DEC8 /* Pods_SilentWarmth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F05AAACFD6EA570BF57BB5F /* Pods_SilentWarmth.framework */; };
 		AC0045821DD57028009E135F /* BubbleTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0045811DD57028009E135F /* BubbleTransition.framework */; };
 		AC0045851DD58285009E135F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0045841DD58285009E135F /* HelpViewController.swift */; };
 		AC212E681DD448E2003A400C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC212E671DD448E2003A400C /* AppDelegate.swift */; };
@@ -17,9 +18,14 @@
 		AC212E7D1DD448E2003A400C /* SilentWarmthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC212E7C1DD448E2003A400C /* SilentWarmthTests.swift */; };
 		AC212E881DD448E2003A400C /* SilentWarmthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC212E871DD448E2003A400C /* SilentWarmthUITests.swift */; };
 		AC212E961DD44D15003A400C /* SendWarmthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC212E951DD44D15003A400C /* SendWarmthViewController.swift */; };
-		AC212E981DD45682003A400C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC212E971DD45682003A400C /* TableViewCell.swift */; };
+		AC2380411DE7E67D0065146A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2380401DE7E67D0065146A /* TestViewController.swift */; };
+		AC2589A51DEBF9480022EB14 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2589A41DEBF9480022EB14 /* Values.swift */; };
+		AC2589A91DEC03050022EB14 /* NotifyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2589A81DEC03050022EB14 /* NotifyListTableViewCell.swift */; };
+		AC891F531DE6B4F80006EE82 /* Uuids.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC891F521DE6B4F80006EE82 /* Uuids.swift */; };
+		ACC628C21DDD6B89002E85BE /* AlertBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC628C11DDD6B89002E85BE /* AlertBase.swift */; };
 		ACD199021DD97DEA009AC564 /* InviteWarmthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD199011DD97DEA009AC564 /* InviteWarmthViewController.swift */; };
 		ACD199041DD97E0B009AC564 /* MurmurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD199031DD97E0B009AC564 /* MurmurViewController.swift */; };
+		ACF2060C1DDAD48C00E9446F /* twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ACF2060B1DDAD48C00E9446F /* twitter.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2374E2937350F517D1BCEBFA /* Pods-SilentWarmthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmthUITests/Pods-SilentWarmthUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F05AAACFD6EA570BF57BB5F /* Pods_SilentWarmth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SilentWarmth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DDE56DA0E4C537948C2E0D /* Pods-SilentWarmth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmth.release.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmth/Pods-SilentWarmth.release.xcconfig"; sourceTree = "<group>"; };
+		98C045134FEE2B33946A81A1 /* Pods-SilentWarmthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmthTests/Pods-SilentWarmthTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC0045811DD57028009E135F /* BubbleTransition.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BubbleTransition.framework; path = Carthage/Build/iOS/BubbleTransition.framework; sourceTree = "<group>"; };
 		AC0045841DD58285009E135F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AC212E641DD448E2003A400C /* SilentWarmth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SilentWarmth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,9 +66,17 @@
 		AC212E871DD448E2003A400C /* SilentWarmthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentWarmthUITests.swift; sourceTree = "<group>"; };
 		AC212E891DD448E2003A400C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC212E951DD44D15003A400C /* SendWarmthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendWarmthViewController.swift; sourceTree = "<group>"; };
-		AC212E971DD45682003A400C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AC2380401DE7E67D0065146A /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		AC2589A41DEBF9480022EB14 /* Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
+		AC2589A81DEC03050022EB14 /* NotifyListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyListTableViewCell.swift; sourceTree = "<group>"; };
+		AC891F521DE6B4F80006EE82 /* Uuids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uuids.swift; sourceTree = "<group>"; };
+		ACC628C11DDD6B89002E85BE /* AlertBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBase.swift; sourceTree = "<group>"; };
 		ACD199011DD97DEA009AC564 /* InviteWarmthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteWarmthViewController.swift; sourceTree = "<group>"; };
 		ACD199031DD97E0B009AC564 /* MurmurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MurmurViewController.swift; sourceTree = "<group>"; };
+		ACF2060B1DDAD48C00E9446F /* twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = twitter.jpg; path = ../../../../Downloads/twitter.jpg; sourceTree = "<group>"; };
+		B1EF3CF6D44C27E093D860C8 /* Pods-SilentWarmth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmth/Pods-SilentWarmth.debug.xcconfig"; sourceTree = "<group>"; };
+		DE96B95C2F5589C79D2A0C1E /* Pods-SilentWarmthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmthTests/Pods-SilentWarmthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F832EE0525EC81156A195688 /* Pods-SilentWarmthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SilentWarmthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SilentWarmthUITests/Pods-SilentWarmthUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0045821DD57028009E135F /* BubbleTransition.framework in Frameworks */,
+				3AA048AB4DC8A0E804B1DEC8 /* Pods_SilentWarmth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +106,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		528E8D806AC6908B6053948A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1EF3CF6D44C27E093D860C8 /* Pods-SilentWarmth.debug.xcconfig */,
+				97DDE56DA0E4C537948C2E0D /* Pods-SilentWarmth.release.xcconfig */,
+				DE96B95C2F5589C79D2A0C1E /* Pods-SilentWarmthTests.debug.xcconfig */,
+				98C045134FEE2B33946A81A1 /* Pods-SilentWarmthTests.release.xcconfig */,
+				F832EE0525EC81156A195688 /* Pods-SilentWarmthUITests.debug.xcconfig */,
+				2374E2937350F517D1BCEBFA /* Pods-SilentWarmthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC0045801DD57028009E135F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				AC0045811DD57028009E135F /* BubbleTransition.framework */,
+				2F05AAACFD6EA570BF57BB5F /* Pods_SilentWarmth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +136,7 @@
 				AC212E861DD448E2003A400C /* SilentWarmthUITests */,
 				AC212E651DD448E2003A400C /* Products */,
 				AC0045801DD57028009E135F /* Frameworks */,
+				528E8D806AC6908B6053948A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +153,7 @@
 		AC212E661DD448E2003A400C /* SilentWarmth */ = {
 			isa = PBXGroup;
 			children = (
+				ACF2060B1DDAD48C00E9446F /* twitter.jpg */,
 				AC212E671DD448E2003A400C /* AppDelegate.swift */,
 				AC212E691DD448E2003A400C /* ViewController.swift */,
 				AC212E6B1DD448E2003A400C /* Main.storyboard */,
@@ -127,9 +162,13 @@
 				AC212E731DD448E2003A400C /* Info.plist */,
 				AC212E951DD44D15003A400C /* SendWarmthViewController.swift */,
 				ACD199011DD97DEA009AC564 /* InviteWarmthViewController.swift */,
-				AC212E971DD45682003A400C /* TableViewCell.swift */,
 				AC0045841DD58285009E135F /* HelpViewController.swift */,
 				ACD199031DD97E0B009AC564 /* MurmurViewController.swift */,
+				ACC628C11DDD6B89002E85BE /* AlertBase.swift */,
+				AC891F521DE6B4F80006EE82 /* Uuids.swift */,
+				AC2380401DE7E67D0065146A /* TestViewController.swift */,
+				AC2589A41DEBF9480022EB14 /* Values.swift */,
+				AC2589A81DEC03050022EB14 /* NotifyListTableViewCell.swift */,
 			);
 			path = SilentWarmth;
 			sourceTree = "<group>";
@@ -159,10 +198,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC212E8C1DD448E2003A400C /* Build configuration list for PBXNativeTarget "SilentWarmth" */;
 			buildPhases = (
+				D6E3793835700CAC028D750D /* [CP] Check Pods Manifest.lock */,
 				AC212E601DD448E1003A400C /* Sources */,
 				AC212E611DD448E1003A400C /* Frameworks */,
 				AC212E621DD448E1003A400C /* Resources */,
 				AC0045831DD57039009E135F /* ShellScript */,
+				4A565AF1A38417306C71B2E0 /* [CP] Embed Pods Frameworks */,
+				0F574F3CABA80429726C7625 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC212E8F1DD448E2003A400C /* Build configuration list for PBXNativeTarget "SilentWarmthTests" */;
 			buildPhases = (
+				E9641AE400866A893311836A /* [CP] Check Pods Manifest.lock */,
 				AC212E741DD448E2003A400C /* Sources */,
 				AC212E751DD448E2003A400C /* Frameworks */,
 				AC212E761DD448E2003A400C /* Resources */,
+				C7CD70D4B04FA3E1C078449A /* [CP] Embed Pods Frameworks */,
+				8738984519383BC4701C5C8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC212E921DD448E2003A400C /* Build configuration list for PBXNativeTarget "SilentWarmthUITests" */;
 			buildPhases = (
+				4B53E7FF858814413713CCAA /* [CP] Check Pods Manifest.lock */,
 				AC212E7F1DD448E2003A400C /* Sources */,
 				AC212E801DD448E2003A400C /* Frameworks */,
 				AC212E811DD448E2003A400C /* Resources */,
+				29271A7FD2781B32DFF133E4 /* [CP] Embed Pods Frameworks */,
+				3D5AD92FBCFD7CBA300A3440 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,6 +271,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3457D6786D;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AC212E771DD448E2003A400C = {
 						CreatedOnToolsVersion = 8.1;
@@ -264,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC212E721DD448E2003A400C /* LaunchScreen.storyboard in Resources */,
+				ACF2060C1DDAD48C00E9446F /* twitter.jpg in Resources */,
 				AC212E6F1DD448E2003A400C /* Assets.xcassets in Resources */,
 				AC212E6D1DD448E2003A400C /* Main.storyboard in Resources */,
 			);
@@ -286,6 +340,96 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0F574F3CABA80429726C7625 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmth/Pods-SilentWarmth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29271A7FD2781B32DFF133E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmthUITests/Pods-SilentWarmthUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D5AD92FBCFD7CBA300A3440 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmthUITests/Pods-SilentWarmthUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A565AF1A38417306C71B2E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmth/Pods-SilentWarmth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B53E7FF858814413713CCAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8738984519383BC4701C5C8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmthTests/Pods-SilentWarmthTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC0045831DD57039009E135F /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +444,51 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		C7CD70D4B04FA3E1C078449A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SilentWarmthTests/Pods-SilentWarmthTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6E3793835700CAC028D750D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9641AE400866A893311836A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,12 +496,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC891F531DE6B4F80006EE82 /* Uuids.swift in Sources */,
 				ACD199021DD97DEA009AC564 /* InviteWarmthViewController.swift in Sources */,
 				AC212E961DD44D15003A400C /* SendWarmthViewController.swift in Sources */,
-				AC212E981DD45682003A400C /* TableViewCell.swift in Sources */,
+				AC2589A91DEC03050022EB14 /* NotifyListTableViewCell.swift in Sources */,
 				AC212E6A1DD448E2003A400C /* ViewController.swift in Sources */,
 				ACD199041DD97E0B009AC564 /* MurmurViewController.swift in Sources */,
+				ACC628C21DDD6B89002E85BE /* AlertBase.swift in Sources */,
 				AC212E681DD448E2003A400C /* AppDelegate.swift in Sources */,
+				AC2589A51DEBF9480022EB14 /* Values.swift in Sources */,
+				AC2380411DE7E67D0065146A /* TestViewController.swift in Sources */,
 				AC0045851DD58285009E135F /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +656,7 @@
 		};
 		AC212E8D1DD448E2003A400C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1EF3CF6D44C27E093D860C8 /* Pods-SilentWarmth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3457D6786D;
@@ -480,6 +674,7 @@
 		};
 		AC212E8E1DD448E2003A400C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DDE56DA0E4C537948C2E0D /* Pods-SilentWarmth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3457D6786D;
@@ -497,6 +692,7 @@
 		};
 		AC212E901DD448E2003A400C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE96B95C2F5589C79D2A0C1E /* Pods-SilentWarmthTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +708,7 @@
 		};
 		AC212E911DD448E2003A400C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C045134FEE2B33946A81A1 /* Pods-SilentWarmthTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +724,7 @@
 		};
 		AC212E931DD448E2003A400C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F832EE0525EC81156A195688 /* Pods-SilentWarmthUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3457D6786D;
@@ -541,6 +739,7 @@
 		};
 		AC212E941DD448E2003A400C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2374E2937350F517D1BCEBFA /* Pods-SilentWarmthUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3457D6786D;

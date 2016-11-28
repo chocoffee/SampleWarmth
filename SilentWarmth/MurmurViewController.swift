@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-class MurmurViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class MurmurViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CBPeripheralDelegate, CBPeripheralManagerDelegate {
 
     @IBOutlet weak var messagePicker: UIPickerView!
     @IBOutlet weak var colorPicker: UIPickerView!
     
-    let message = ["子供が泣いてごめんなさい", "寝てしまってごめんなさい", "荷物が多くてごめんなさい"]
-    let color = ["赤", "青", "黄", "白", "黒"]
+    let alert = AleatBase()
+    var advertiseData = [[]]
+    
+    var peripheral: CBPeripheral!
+    var peripheralManager: CBPeripheralManager!
+    var characteristic: CBMutableCharacteristic!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,12 +29,11 @@ class MurmurViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         colorPicker.delegate = self
         colorPicker.dataSource = self
         self.title = "周囲に発信する"
-        // Do any additional setup after loading the view.
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -37,30 +42,68 @@ class MurmurViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag == 1 {
-            return self.message.count
+            return Values.message.count
         }else {
-            return self.color.count
+            return Values.color.count
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
-            return self.message[row]
+            return Values.message[row]
         }else {
-            return self.color[row]
+            return Values.color[row]
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
     @IBAction func sendMessage(_ sender: UIButton) {
+        let messageIndex = messagePicker.selectedRow(inComponent: 0)
+        let colorIndex = colorPicker.selectedRow(inComponent: 0)
+        var str = ""
+        self.advertiseData = [[2], [messageIndex], [colorIndex]]
+        str.append("\(Values.message[messageIndex]),\n\(Values.color[colorIndex])")
+        
+        setAlert(str)
+    }
+    
+    func setAlert(_ str: String) {
+        alert.alert("発信する！", btn2: "キャンセル", title: "確認", subTitle: str, advertise: advertise)
     }
 
+    func advertise() {
+        guard let json = try? JSONSerialization.data(withJSONObject: advertiseData, options: .init(rawValue: 0)) else{
+            return
+        }
+        let serviceUUID = CBUUID(string: Uuids.serviceUUID)
+        let service = CBMutableService(type: serviceUUID, primary: true)
+        let charactericUUID = CBUUID(string: Uuids.characteristicUUID)
+        characteristic = CBMutableCharacteristic(type: charactericUUID, properties: CBCharacteristicProperties.read, value: json, permissions: CBAttributePermissions.readable)
+        service.characteristics = [characteristic]
+        self.peripheralManager.add(service)
+        
+        let advertisementData = [CBAdvertisementDataServiceUUIDsKey:[service.uuid]] as [String : Any]
+        peripheralManager.startAdvertising(advertisementData)
+        
+    }
+    
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
+        print("state: \(peripheral.state)")
+    }
+    
+    func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
+        if error != nil {
+            print("service add failed...")
+            return
+        }
+        print("service add success!")
+    }
+    
+    //  advertise result
+    func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
+        if error != nil {
+            print("advertising error...")
+            return
+        }
+        print("advertising success!")
+    }
 }
